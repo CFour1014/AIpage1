@@ -26,6 +26,7 @@ body {
     padding: 0 20px;
 }
 
+/* Header & Lang Switcher */
 header {
     background: var(--white);
     border-bottom: 1px solid var(--gray);
@@ -39,6 +40,7 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 70px;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -47,25 +49,50 @@ header {
     color: var(--primary);
 }
 
-nav a {
-    margin-left: 24px;
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
     text-decoration: none;
     color: var(--text);
     font-weight: 500;
     transition: color 0.2s;
 }
 
-nav a:hover {
+.nav-links a:hover {
     color: var(--primary);
 }
 
-.btn-nav {
-    background: var(--primary);
-    color: var(--white) !important;
-    padding: 8px 16px;
-    border-radius: 6px;
+/* 語言切換按鈕樣式 */
+.lang-switcher {
+    display: flex;
+    gap: 6px;
 }
 
+.lang-btn {
+    background: #f1f5f9;
+    border: 1px solid var(--gray);
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.lang-btn:hover {
+    background: #e2e8f0;
+}
+
+.lang-btn.active {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+/* Hero Section */
 .hero {
     background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
     padding: 80px 0;
@@ -94,32 +121,10 @@ nav a:hover {
     font-size: 1.125rem;
     color: #475569;
     max-width: 700px;
-    margin: 0 auto 32px auto;
+    margin: 0 auto;
 }
 
-.hero-btns {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-}
-
-.btn {
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.2s;
-}
-
-.btn.primary {
-    background: var(--primary);
-    color: var(--white);
-}
-
-.btn.primary:hover {
-    background: var(--primary-dark);
-}
-
+/* Sections */
 .section {
     padding: 60px 0;
 }
@@ -155,33 +160,14 @@ nav a:hover {
     border: 1px solid var(--gray);
 }
 
-.feature-card h4 {
+.card h4, .feature-card h4 {
     margin-bottom: 12px;
     color: var(--primary-dark);
 }
 
-.arch-flow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    flex-wrap: wrap;
-}
-
-.arch-step {
-    background: var(--white);
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid var(--gray);
-    width: 240px;
+/* Demo Box */
+.text-center {
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-}
-
-.arch-arrow {
-    font-size: 1.5rem;
-    color: var(--primary);
-    font-weight: bold;
 }
 
 .demo-desc {
@@ -201,6 +187,25 @@ nav a:hover {
     margin-bottom: 16px;
 }
 
+.btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s;
+}
+
+.btn.primary {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn.primary:hover {
+    background: var(--primary-dark);
+}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 30px 0;

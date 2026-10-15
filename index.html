@@ -7,103 +7,105 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-lang="zh">
+    <!-- 導覽列 -->
     <header>
         <div class="container nav-container">
             <h1 class="logo">Wenzao Navigator 🏛️</h1>
-            <nav>
-                <a href="#about">導覽特色</a>
-                <a href="#features">多語支援</a>
-                <a href="#architecture">技術架構</a>
-                <a href="#demo" class="btn-nav">Live Demo</a>
+            <nav class="nav-links">
+                <a href="#about" data-zh="導覽特色" data-en="Features" data-es="Características" data-ja="特徴">導覽特色</a>
+                <a href="#classrooms" data-zh="特色教室與大樓" data-en="Classrooms & Halls" data-es="Aulas y Edificios" data-ja="教室・棟案内">特色教室與大樓</a>
+                <a href="#demo" data-zh="互動體驗" data-en="Demo" data-es="Demostración" data-ja="デモ">互動體驗</a>
             </nav>
+            <!-- 多語言切換按鈕 -->
+            <div class="lang-switcher">
+                <button onclick="setLanguage('zh')" class="lang-btn active">中文</button>
+                <button onclick="setLanguage('en')" class="lang-btn">EN</button>
+                <button onclick="setLanguage('es')" class="lang-btn">ES</button>
+                <button onclick="setLanguage('ja')" class="lang-btn">日本語</button>
+            </div>
         </div>
     </header>
 
+    <!-- 主視覺 Banner -->
     <section class="hero">
         <div class="container hero-content">
-            <span class="badge">文藻外語大學 x AI 智慧導覽</span>
-            <h2>用您的母語，探索文藻的歐風校園</h2>
-            <p>結合 AI Agent 與多語言知識庫，為全球外賓、交換生與遊客提供即時、生動且具互動性的沈浸式校園導覽體驗。</p>
-            <div class="hero-btns">
-                <a href="#demo" class="btn primary">體驗 Live Demo</a>
-            </div>
+            <span class="badge" data-zh="文藻外語大學 x 智慧導覽" data-en="Wenzao University x Smart Navigator" data-es="Universidad Wenzao x Navegador Inteligente" data-ja="文藻外語大学 x スマートナビゲーター">文藻外語大學 x 智慧導覽</span>
+            <h2 data-zh="探索文藻多元教室與專業教學空間" data-en="Explore Wenzao's Diverse Classrooms & Professional Spaces" data-es="Explore las diversas aulas y espacios de enseñanza de Wenzao" data-ja="文藻の多様な教室と専門的な学習スペースを探索する">探索文藻多元教室與專業教學空間</h2>
+            <p data-zh="結合多語言導覽，帶您深入了解文藻各棟教學大樓、語言專業教室與特色學習場域。" data-en="Providing multi-language guides to help you discover Wenzao's teaching buildings, language labs, and spaces." data-es="Guiando a través de los edificios de enseñanza y laboratorios de idiomas de Wenzao." data-ja="多言語ガイドを通じて、文藻の教育棟や語学実習室、学習スペースを深く知ることができます。">結合多語言導覽，帶您深入了解文藻各棟教學大樓、語言專業教室與特色學習場域。</p>
         </div>
     </section>
 
+    <!-- 導覽特色 -->
     <section id="about" class="section">
         <div class="container">
-            <h3>💡 為什麼需要 Wenzao Navigator？</h3>
+            <h3 data-zh="💡 為什麼需要教室與空間導覽？" data-en="💡 Why Classroom Navigation?" data-es="💡 ¿Por qué navegación de aulas?" data-ja="💡 教室案内の必要性">💡 為什麼需要教室與空間導覽？</h3>
             <div class="grid-2">
                 <div class="card">
-                    <h4>⚠️ 傳統導覽的侷限</h4>
-                    <p>文藻擁有濃厚的異國風情與多語環境，但現有的校園導覽多以中文為主，或僅有簡單的英文標示。國際交換生、外籍訪客常因語言隔閡，無法深入了解校園文化與建築背後的故事。</p>
+                    <h4 data-zh="🏢 複雜的校園空間" data-en="🏢 Complex Campus Spaces" data-es="🏢 Espacios complejos del campus" data-ja="🏢 複雑なキャンパス空間">🏢 複雜的校園空間</h4>
+                    <p data-zh="文藻擁有至善樓、四維樓、文園等多元大樓，新生或外籍交換生初次尋找特定教室時常花費許多時間。" data-en="Wenzao features multiple buildings like Zhishan and Siwei Halls. Finding specific rooms can be tricky for newcomers." data-es="Wenzao cuenta con varios edificios. Encontrar aulas específicas puede ser difícil para los nuevos estudiantes." data-ja="至善ホールや四維ホールなど多くの建物があり、新入生や留学生が教室を探すのが大変です。">文藻擁有至善樓、四維樓、文園等多元大樓，新生或外籍交換生初次尋找特定教室時常花費許多時間。</p>
                 </div>
                 <div class="card">
-                    <h4>✨ 我們的 AI 數位解方</h4>
-                    <p>打造全方位的「多語言智慧導覽助理」。不論是英文、西班牙語、法語、德語或日語，訪客都能隨時隨地透過手機提問，AI 不僅能介紹景點，還能像在地導覽員一樣回答各種校園生活問題。</p>
+                    <h4 data-zh="🗣️ 專業語言教室" data-en="🗣️ Professional Language Labs" data-es="🗣️ Laboratorios de idiomas" data-ja="🗣️ 専門語学実習室">🗣️ 專業語言教室</h4>
+                    <p data-zh="作為外語重鎮，文藻配有先進的同步口譯教室與多媒體語音教室，多語導覽能精準介紹其功能。" data-en="As a hub for foreign languages, Wenzao is equipped with advanced simultaneous interpretation and multimedia labs." data-es="Como centro de lenguas extranjeras, Wenzao cuenta con laboratorios avanzados." data-ja="外国語のハブとして、文藻には先進的な同時通訳室やマルチメディア教室が完備されています。">作為外語重鎮，文藻配有先進的同步口譯教室與多媒體語音教室，多語導覽能精準介紹其功能。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="features" class="section bg-light">
+    <!-- 文藻各教室與大樓介紹 -->
+    <section id="classrooms" class="section bg-light">
         <div class="container">
-            <h3>🌍 支援多元語言與沉浸式互動</h3>
+            <h3 data-zh="🏫 文藻主要教學大樓與特色教室" data-en="🏫 Main Buildings & Special Classrooms" data-es="🏫 Edificios Principales y Aulas" data-ja="🏫 主要な教育棟と特別教室">🏫 文藻主要教學大樓與特色教室</h3>
             <div class="grid-3">
                 <div class="feature-card">
-                    <h4>🗣️ 多語系即時切換</h4>
-                    <p>支援中、英、西、法、德、日等多語系提問與回答，滿足文藻多元外語教學與國際交流的特色。</p>
+                    <h4 data-zh="至善樓教室 (Zhishan Hall Rooms)" data-en="Zhishan Hall Classrooms" data-es="Aulas del Edificio Zhishan" data-ja="至善ホール教室">至善樓教室 (Zhishan Hall Rooms)</h4>
+                    <p data-zh="主要作為一般通識課程與行政辦公空間，採光良好、環境清幽，是文藻最具代表性的上課據點之一。" data-en="Mainly used for general education courses and administration, featuring a bright and quiet learning environment." data-es="Utilizado principalmente para cursos de educación general y administración." data-ja="主に一般教養科目や事務スペースとして使用され、明るく静かな学習環境が整っています。">主要作為一般通識課程與行政辦公空間，採光良好、環境清幽，是文藻最具代表性的上課據點之一。</p>
                 </div>
                 <div class="feature-card">
-                    <h4>📍 QR Code 景點解說</h4>
-                    <p>散步至至善樓、奧大利樓或文藻圖書館時，掃描現場 QR Code 即可由 AI 提供深度歷史與建築導覽。</p>
+                    <h4 data-zh="四維樓多媒體教室 (Siwei Multimedia Labs)" data-en="Siwei Multimedia Labs" data-es="Laboratorios Multimedia de Siwei" data-ja="四維マルチメディア教室">四維樓多媒體教室 (Siwei Multimedia Labs)</h4>
+                    <p data-zh="配備先進的電腦與視聽設備，專門提供外語聽力、口說練習以及數位多媒體互動教學使用。" data-en="Equipped with advanced computers and audiovisual gear for listening, speaking, and interactive digital classes." data-es="Equipado con computadoras avanzadas y equipos audiovisuales para clases interactivas." data-ja="リスニング、スピーキング、インタラクティブなデジタル授業用の先進的な設備が整っています。">配備先進的電腦與視聽設備，專門提供外語聽力、口說練習以及數位多媒體互動教學使用。</p>
                 </div>
                 <div class="feature-card">
-                    <h4>🔊 語音朗讀 (TTS)</h4>
-                    <p>不僅有文字對話，更結合語音合成技術，讓訪客能用聽的感受外語導覽的魅力。</p>
+                    <h4 data-zh="同步口譯專業教室 (Interpretation Booths)" data-en="Interpretation Booths" data-es="Cabinas de Interpretación" data-ja="同時通訳ブース">同步口譯專業教室 (Interpretation Booths)</h4>
+                    <p data-zh="仿照聯合國規格設置的專業同步口譯教室，具備專業隔音設備與耳機麥克風，培育頂尖外語人才。" data-en="Professional interpretation booths designed to international standards with advanced acoustic isolation." data-es="Cabinas de interpretación profesional diseñadas según estándares internacionales." data-ja="国際基準に合わせて設計されたプロ仕様の同時通訳ブースで、優れた語学人材を育成します。">仿照聯合國規格設置的專業同步口譯教室，具備專業隔音設備與耳機麥克風，培育頂尖外語人才。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="architecture" class="section">
-        <div class="container">
-            <h3>🛠️ 系統技術架構</h3>
-            <div class="arch-flow">
-                <div class="arch-step">
-                    <h4>1. 互動介面</h4>
-                    <p>Mobile Web App / LINE Bot</p>
-                </div>
-                <div class="arch-arrow">➔</div>
-                <div class="arch-step">
-                    <h4>2. 智能核心</h4>
-                    <p>Dify / Coze (RAG 校園知識庫)</p>
-                </div>
-                <div class="arch-arrow">➔</div>
-                <div class="arch-step">
-                    <h4>3. 語音與多語生成</h4>
-                    <p>LLM 翻譯引擎 + TTS 語音朗讀</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="demo" class="section bg-light">
+    <!-- 互動體驗區 -->
+    <section id="demo" class="section">
         <div class="container text-center">
-            <h3>🎬 現場 Live Demo 規劃</h3>
-            <p class="demo-desc">評審現場掃描 QR Code 或開啟網頁，切換至西班牙語或英語詢問：「請問至善樓怎麼走？」，AI 立即以該語言流暢回答並提供導引路線。</p>
+            <h3 data-zh="🎬 教室導覽互動體驗" data-en="🎬 Classroom Guide Demo" data-es="🎬 Demostración de Guía de Aulas" data-ja="🎬 教室ガイドデモ體驗">🎬 教室導覽互動體驗</h3>
+            <p class="demo-desc" data-zh="點擊上方語言按鈕，即可用不同國家的語言查看文藻各教室的詳細介紹！" data-en="Click the language buttons above to view detailed classroom introductions in various languages!" data-es="¡Haz clic en los botones de idioma de arriba para ver detalles de las aulas!" data-ja="上の言語ボタンをクリックして、各教室の詳細な紹介をさまざまな言語でご覧ください！">點擊上方語言按鈕，即可用不同國家的語言查看文藻各教室的詳細介紹！</p>
             <div class="demo-box">
-                <p>👉 <strong>點擊下方按鈕試玩導覽 Demo</strong></p>
-                <a href="#" class="btn primary">開啟線上導覽試玩</a>
+                <p data-zh="👉 準備好尋找您的教室了嗎？" data-en="👉 Ready to find your classroom?" data-es="👉 ¿Listo para encontrar tu aula?" data-ja="👉 教室を探す準備はできましたか？">👉 準備好尋找您的教室了嗎？</p>
+                <a href="#classrooms" class="btn primary" data-zh="查看教室介紹" data-en="View Classrooms" data-es="Ver Aulas" data-ja="教室を見る">查看教室介紹</a>
             </div>
         </div>
     </section>
 
+    <!-- 頁尾 -->
     <footer>
         <div class="container">
             <p>&copy; 2026 Wenzao Polyglot Campus Navigator. All Rights Reserved. Built with GitHub Pages.</p>
         </div>
     </footer>
+
+    <!-- 多語言切換邏輯 Script -->
+    <script>
+        function setLanguage(lang) {
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            document.querySelectorAll('[data-zh]').forEach(el => {
+                if (el.getAttribute(`data-${lang}`)) {
+                    el.innerText = el.getAttribute(`data-${lang}`);
+                }
+            });
+            document.body.setAttribute('data-lang', lang);
+        }
+    </script>
 </body>
 </html>
